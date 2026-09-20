@@ -1,0 +1,17 @@
+# org-policy-drift
+
+A CLI tool to detect drift between declared org standards and actual repo configuration.
+
+## Usage
+
+```bash
+org-policy-drift init                              # creates .org-policy.yaml
+org-policy-drift scan --org <org> --policy <file>  # scan all repos
+org-policy-drift scan --org <org> --policy <file> --json   # JSON output
+org-policy-drift scan --org <org> --policy <file> --fail-on-drift  # CI gate
+```
+
+## Exit Codes
+
+- `0`: No drift detected
+- `1`: Drift detected (or error)
